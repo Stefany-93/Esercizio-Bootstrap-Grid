@@ -1,0 +1,178 @@
+.fix {
+    display: flex;
+    position: fixed;
+    border-bottom: solid black 2px;
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    margin-top: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 10%;
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 5vh;
+}
+
+img {
+    max-width: 100%;
+    height: 80vh;
+}
+
+footer {
+    background-image: url(./media/poppy.jpg);
+    height: 50vh;
+    margin-top: 5%;
+}
+
+.bi {
+    color: white;
+    border-radius: 40%;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.luce {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+}
+
+.lucina {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: yellow;
+    animation-name: lucciola;
+}
+
+.lucina:hover {
+    animation-name: lucciola;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+
+.shadow {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 0, 0.486);
+    border-radius: 50%;
+}
+
+@keyframes lucciola {
+    from {transform: rotate(0deg) translate(10px) rotate(0deg);}
+    to {transform: rotate(-360deg) translate(10px) rotate(360deg) translateX(220px)}
+}
+
+.simbionte {
+    display: inline-block;
+    padding: 10px 30px;
+    color: black;
+    transition: 1s;
+    position: relative;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    }
+
+.simbionte::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 40px;
+    top: 3px;
+    left: -10px;
+    background-image: linear-gradient(120deg, black, grey, white);
+    background-position: 0px 0px;
+    background-size: 200%;
+    transition: 1s;
+     z-index: -1;
+}
+
+.simbionte:hover::after {
+    width: 500%;
+    background-position: 200% 0px;
+}
+
+.fuoco {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: orange;
+    background-color: red;
+}
+
+.camion {
+    color: black;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    display: inline-block;
+    color: black;
+    transition: 1s;
+    position: relative;
+    margin-left: -15px;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    animation-name: move;
+}
+
+.camion:hover {
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    from {transform: translateX(0px)}
+    to {transform: translateX(220px)}
+}
+
+.trasparente {
+    color: transparent;
+}
+
+.btn-close {
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+    border-radius: 0px;
+  }
+
+.visibile:focus > .trasparente {
+    color: black;
+}
+
+.visibile:focus > .btn-close {
+    width: 1em;
+    height: 1em;
+    padding: 0.25em 0.25em;
+    border-radius: 0.375rem;
+}
+
+@media screen and (min-width: 576px){
+    
+    h1 {
+        font-size: 200%;
+    }
+}
+
+@media screen and (min-width: 992px){
+    
+    h1 {
+        font-size: 300%;
+    }
+}
