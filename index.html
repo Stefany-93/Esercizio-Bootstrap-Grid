@@ -14,7 +14,7 @@
 
 <body>
     <nav>
-        <div class="flex">
+        <div>
             <ul class="fix bg-danger">
                 <li>HOME</li>
                 <li>BLOG</li>
@@ -100,24 +100,29 @@
         
             <label for="password" class="col-12 col-sm-2">Password</label>
             <input type="password" name="" id="password" placeholder="******" class="col-12  col-sm-3">
-            
-            <button class="col-3 col-sm-2 col-lg-1 visibile">
-                <span>INVIA</span>
-                <div class="modal trasparente" tabindex="-1">
-                    <button type="button" class="btn-close trasparente" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-secondary col-3 col-sm-2 col-lg-1" data-bs-toggle="modal" data-bs-target="#invia">INVIA</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="invia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Grazie per averci contattato</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        Ti risponderemo appena possibile   
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                            <button type="button" class="btn btn-primary">Salva le modifiche</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body trasparente">
-                    <p>Grazie per averci contattato</p>
-                </div>
-                <script>
-                const myModal = document.getElementById('myModal')
-                const myInput = document.getElementById('myInput')
-                    
-                myModal.addEventListener('shown.bs.modal', () => {
-                myInput.focus()
-                    })
-                </script>
-            </button>
+            </div>  
+  
         </section>
     </form>
     
